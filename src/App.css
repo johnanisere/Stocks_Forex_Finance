@@ -1,0 +1,193 @@
+/*flexbox and Positioning*/
+.poa{
+  position: relative;
+}
+.pob{
+  position: absolute;
+}
+.at{
+  align-items: flex-start;
+}
+.ab{
+  display:flex;
+}
+.bc{
+  justify-content: space-between;
+}
+.gc{
+  justify-content: flex-start;
+}
+.gh{
+  align-items: center;
+}
+.cd{
+  justify-content: flex-end;
+}
+.fd{
+  flex-direction: row;
+}
+.sa{
+  justify-content: space-around;
+}
+.jf{
+  justify-content:center;
+}
+
+/*Containers Statisticals*/
+.pot{
+  top:-10px;
+}
+.pol{
+  left:10px;
+}
+.mb{
+  margin: 5px 0;
+}
+.mta{
+  margin-top: 50px;
+}
+.ma{
+  margin:0;
+}
+.ml{
+  margin-left:30px;
+}
+.ppa{
+  padding: 20px 0;
+}
+.ppb{
+  padding:0 25px;
+}
+.ppc{
+  padding-bottom: 20px;
+}
+.pd{
+  padding-left: 20px;
+}
+.pp{
+  padding: 30px 25px;
+}
+.ht{
+  min-height: 100%;
+}
+.hi{
+  height:40px;
+}
+.hj{
+  height:100%;
+}
+.ib{
+  width:150px
+}
+.ia{
+  width:40px;
+}
+.wd{
+  width: 50%;
+}
+.dd{
+  width:100%;
+}
+.ns{
+  width: 90px;
+}
+.wa{
+  width: 80%;
+}
+.wb{
+  width:20%
+}
+.ha{
+  width: 250px;
+}
+.wf{
+  width:15px;
+}
+.hf{
+  height: 15px;
+}
+
+/*borders*/
+.bra{
+  border-radius: 20%;
+}
+/*fonts */
+.fw{
+  font-size: 16px;
+}
+.fx{
+  font-size: 20px;
+}
+.fb{
+  font-family: 'Julius Sans One', sans-serif;
+}
+.fe{
+  font-family: 'Cantarell', sans-serif;
+}
+.fwa{
+  font-weight: initial;
+}
+.fss{
+  font-weight: normal;
+}
+.td{
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.2);
+}
+/*colors*/
+.bb{
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.bg{
+  background-color: rgba(0,0,0,0.7)
+}
+.cob{
+  background-color:rgb(3,169,244) 
+}
+.ca{
+  color:white;
+}
+.da:hover .pa{
+  color:rgb(3,169,244)
+}
+.da:hover{
+  border-left:5px solid rgb(3,169,244);
+  background-color: rgba(0,0,0,0.9)
+}
+.df:hover{
+  color:rgb(3,169,244);
+}
+.dy:hover{
+  background-color: rgba(0,0,0,0.1)
+}
+.cb{
+  color: rgb(3,169,244);
+}
+.atv{
+  border-left:5px solid rgb(3,169,244);
+  background-color: rgba(0,0,0,0.9)
+}
+.atvp{
+  color:rgb(3,169,244)
+}
+/*cursor*/
+.v:hover{
+  cursor: default;
+  }
+
+.ck:hover{
+  cursor: pointer;
+}
+/*display*/
+.dc{
+  display: none;
+}
+.dp{
+  display:inline-block;
+}
+.do{
+  opacity: 0;
+}
+.dov{
+overflow-x: hidden; 
+}
