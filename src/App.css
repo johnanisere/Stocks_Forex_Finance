@@ -1,3 +1,8 @@
+/*defaults*/
+a{
+  text-decoration: none;
+
+}
 /*flexbox and Positioning*/
 .poa{
   position: relative;
@@ -52,6 +57,12 @@
 .ml{
   margin-left:30px;
 }
+.mla{
+  margin-left: 15px;
+}
+.mmi{
+  margin-right: 15px;
+}
 .ppa{
   padding: 20px 0;
 }
@@ -88,6 +99,9 @@
 .dd{
   width:100%;
 }
+.dg{
+  width: 60%;
+}
 .ns{
   width: 90px;
 }
@@ -106,10 +120,19 @@
 .hf{
   height: 15px;
 }
+.hfa{
+  height: 12px;
+}
 
 /*borders*/
 .bra{
   border-radius: 20%;
+}
+.coste{
+  border-radius: 25px;
+}
+.onike{
+  border-radius: 5px;
 }
 /*fonts */
 .fw{
@@ -122,7 +145,7 @@
   font-family: 'Julius Sans One', sans-serif;
 }
 .fe{
-  font-family: 'Cantarell', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 .fwa{
   font-weight: initial;
@@ -138,6 +161,21 @@
 .bb{
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
+.bh{
+  border:2px solid rgb(3,169,244);
+}
+.bha{
+  border:2px solid rgb(255,123,22);
+}
+.bhb{
+  border:2px solid rgb(169,179,50);
+}
+.bhc{
+  border:2px solid rgb(45,203,130);
+}
+.bhd{
+  border:2px solid rgb(233,30,99);
+}
 .bg{
   background-color: rgba(0,0,0,0.7)
 }
@@ -147,6 +185,9 @@
 .ca{
   color:white;
 }
+.caa{
+  color:rgba(255,255,255,0.7)
+}
 .da:hover .pa{
   color:rgb(3,169,244)
 }
@@ -154,11 +195,20 @@
   border-left:5px solid rgb(3,169,244);
   background-color: rgba(0,0,0,0.9)
 }
+.da:hover .caa{
+  color:white;
+}
 .df:hover{
   color:rgb(3,169,244);
 }
 .dy:hover{
   background-color: rgba(0,0,0,0.1)
+}
+.crq{
+  background-color: transparent;
+}
+.crr{
+  color:red;
 }
 .cb{
   color: rgb(3,169,244);
@@ -191,3 +241,104 @@
 .dov{
 overflow-x: hidden; 
 }
+.dvv{
+  display: block;
+}
+
+/*animation*/
+.aa{
+  animation-name: one;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes one{
+  from{
+    background: linear-gradient(to left, rgba(255,255,255,0.2), rgba(255,255,255,0.5));
+  }
+  to{
+    background: linear-gradient(to left, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+  }
+}
+
+
+/*--custom- checkbox*/
+.checkmark{
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 15px;
+}
+.hcc:hover{
+  border:none;
+  color:rgba(0,0,0,0.7);
+  font-weight: bold
+}
+.hcc:hover .checkmark{
+  border:2px solid rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.9);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.hcc input:checked ~ .checkmark:after {
+  display: block;
+}
+.hcc input:checked ~ .checkmark { 
+  border: none;
+}
+.hcc input:checked ~ .kia{
+  color:rgba(0,0,0,0.7);
+  font-weight: bold
+}
+.checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 10px;
+  border: solid rgba(0,0,0,0.7);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ttf{
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+/*checkbox style--varitions*/
+.och:hover,
+.och input:checked ~ .checkmark,
+.och input:checked ~ .ttf {
+  background-color: rgb(3,169,244);
+}
+
+.str:hover,
+.str input:checked ~ .checkmark ,
+.str input:checked ~ .ttf {
+  background-color: rgb(255,123,22);
+}
+
+.ing:hover,
+.ing input:checked ~ .checkmark,
+.ing input:checked ~ .ttf {
+  background-color: rgb(169,179,50);
+}
+
+.gyi:hover,
+.gyi input:checked ~ .checkmark,
+.gyi input:checked ~ .ttf {
+  background-color: rgb(45,203,130);
+}
+
+.yng:hover,
+.yng input:checked ~ .checkmark,
+.yng input:checked ~ .ttf{
+  background-color: rgb(233,30,99);
+}
+
+

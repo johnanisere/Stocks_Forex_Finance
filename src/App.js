@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
 import Sidebar from './Sidebar'
+import ajx from './util/ajax'
+import {connect} from 'react-redux'
+
 
 class App extends Component {
+  componentDidMount(){
+    this.props.dispatch(ajx.newsfetch)
+  }
   render() {
     return (
       <div>
@@ -13,4 +18,7 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return state
+}
+export default connect(mapStateToProps)(App)
