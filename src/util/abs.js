@@ -1,3 +1,6 @@
+import { markasread} from '../data_container/actions/actions';
+import storage from '../data_container/store'
+
 // x-class of element to be expanded
 // y-class of element to be hidden
 // z-id of thier container
@@ -42,6 +45,8 @@ export const colpand=(x,y,xo,v,w,z,u,i,sn,oth,ott,otta)=>{
         e.classList.remove(u)
     }
 }
+
+
 //e-event object
 //cc-class of elements
 //fo-child class of element with class cc
@@ -49,7 +54,6 @@ export const colpand=(x,y,xo,v,w,z,u,i,sn,oth,ott,otta)=>{
 //atp-class to add to fo to make target child active
 //ffo-class to apply font color change to
 //caa-new font color class
-
 export const isactive=(e,cc,fo,atv,atvp,ffo,caa)=>{
     const fz=document.getElementsByClassName(cc)
     const fq=document.getElementsByClassName(fo)
@@ -77,9 +81,9 @@ export const isactive=(e,cc,fo,atv,atvp,ffo,caa)=>{
 
 }
 
+
 //returns an array of random numbers
 //a-length of expected array
-
 export const rand=(i)=>{
     let a=[],v=0
     for(;a.length<i;){
@@ -123,4 +127,14 @@ export const timepassed=(time)=>{
         }
     }
     return "Just now"
+}
+//mark a news object as read 
+export const onread=(e)=>{
+    storage.dispatch(
+        markasread(
+            storage.getState().requests.MARKET_NEWS.news,
+            storage.getState().requests.MARKET_NEWS.read,
+            e.currentTarget.dataset.key
+         )
+    )
 }

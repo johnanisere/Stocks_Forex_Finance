@@ -3,11 +3,20 @@ import './App.css'
 import { colpand,
          isactive,
          rand,
-         timepassed } from './util/abs'
+         timepassed,
+         onread } from './util/abs'
 import {connect} from 'react-redux'
 import propTypes from 'prop-types'
 import { markasread} from './data_container/actions/actions'
-
+import Left from 'react-icons/lib/fa/align-left'
+import For from 'react-icons/lib/md/trending-up'
+import Stocks from 'react-icons/lib/md/timeline'
+import Cry from 'react-icons/lib/fa/bitcoin'
+import Indica from 'react-icons/lib/ti/chart-bar'
+import Sa from 'react-icons/lib/fa/bar-chart'
+import News from 'react-icons/lib/md/mail'
+import Help from 'react-icons/lib/md/help'
+import Ca from 'react-icons/lib/fa/caret-right'
 
 const Sidebar=(props)=>{
     const coxpand=()=>{
@@ -16,77 +25,67 @@ const Sidebar=(props)=>{
     const active=(e)=>{
         isactive(e,'cc','fo','atv','atvp','ffo','caa')
     }
-    
-    const onread=(e)=>{
-        props.dispatch(
-            markasread(
-                props.requests.MARKET_NEWS.news,
-                props.requests.MARKET_NEWS.read,
-                e.currentTarget.dataset.key
-            )
-        )
-    }
     return(
         <div id="ki" className="ha bg fb ht ppc v">
-            <h5 className="ab gh fd pp ma bb ca">
-                <span className="ab gh wb abc" onClick={coxpand} >
-                    <span className="de">a</span>
+            <h5 className="ab gh fd pp ma bb ca" onMouseEnter={coxpand}>
+                <span className="ab gh wb abc" onClick={coxpand}  >
+                    <span className="de fop"><Left/></span>
                 </span>
-                <span className="ab gh wa bc bcd">
+                <span className="ab gh wa bc bcd" >
                     <span className="de cb fx">BILLIO₦AIRI₦G</span>
                     <span className="cd pa"></span>
                 </span>
             </h5>
             <h5 className="ab gh fd pp ma bb ca da ck cc atv" onClick={active} data-gc={'a1'} data-gd={'b1'}>
                 <span className="ab gh wb abc" >
-                    <span className="de">a</span>
+                    <span className="de fop"><For/></span>
                 </span>
                 <span className="ab gh wa bc bcd ffo" id='b1' >
                     <span className="de">FOREX</span>
-                    <span className="cd pa fo atvp" id='a1'>c</span>
+                    <span className="cd pa fo atvp fp" id='a1'><Ca/></span>
                 </span>
             </h5>
             <h5 className="ab gh fd pp ma bb ca da ck cc" onClick={active} data-gc={'a2'} data-gd={'b2'}>
-                <span className="ab gh wb abc" >
-                    <span className="de">a</span>
+                <span className="ab gh wb abc " >
+                    <span className="de fop"><Stocks/></span>
                 </span>
                 <span className="ab gh wa bc bcd caa ffo" id='b2'>
                     <span className="de">STOCKS</span>
-                    <span className="cd pa fo" id="a2">c</span>
+                    <span className="cd pa fo fp" id="a2"><Ca/></span>
                 </span>
             </h5>
             <h5 className="ab gh fd pp ma bb ca da ck cc" onClick={active} data-gc={'a3'} data-gd={'b3'}>
                 <span className="ab gh wb abc" >
-                    <span className="de">a</span>
+                    <span className="de fop"><Cry/></span>
                 </span>
                 <span className="ab gh wa bc bcd caa ffo" id='b3'>
                     <span className="de">CRYPTOCURRENCY</span>
-                    <span className="cd pa fo" id="a3">c</span>
+                    <span className="cd pa fo fp" id="a3"><Ca/></span>
                 </span>
             </h5>
             <h5 className="ab gh fd pp ma bb ca da ck cc" onClick={active} data-gc={'a4'} data-gd={'b4'}>
                 <span className="ab gh wb abc" >
-                    <span className="de">a</span>
+                    <span className="de fop"><Indica/></span>
                 </span>
                 <span className="ab gh wa bc bcd caa ffo" id='b4'>
                     <span className="de">INDICATORS</span>
-                    <span className="cd pa fo" id="a4">c</span>
+                    <span className="cd pa fo fp" id="a4"><Ca/></span>
                 </span>
             </h5>
             <h5 className="ab gh fd pp ma bb ca da ck cc" onClick={active}  data-gc={'a5'} data-gd={'b5'}>
                 <span className="ab gh wb abc" >
-                    <span className="de">a</span>
+                    <span className="de fop"><Sa/></span>
                 </span>
                 <span className="ab gh wa bc bcd caa ffo" id='b5'>
                     <span className="de">SECTOR PERFORMANCE</span>
-                    <span className="cd pa fo" id="a5">c</span>
+                    <span className="cd pa fo fp" id="a5"><Ca/></span>
                 </span>
             </h5>
             <h5 className="ab gh fd pp ma bb ca da ck cc" onClick={active} data-gc={'a6'} data-gd={'b6'}>
                 <span className="ab gh wb abc" >
-                    <span className="de poa">
-                    a
-                        <span className="pob pot wf hf ab gh jf cob bra pol">
+                    <span className="de poa ">
+                        <News className="fop"/>
+                        <span className="pob pot ppd mv wf hf ab gh jf cob pol">
                             {(props.requests.MARKET_NEWS.pending)?
                                 0:
                                 (props.requests.MARKET_NEWS.fulfilled)?
@@ -98,22 +97,22 @@ const Sidebar=(props)=>{
                 </span>
                 <span className="ab gh wa bc bcd caa ffo" id='b6' >
                     <span className="de">NEWS</span>
-                    <span className="cd pa fo" id="a6">c</span>
+                    <span className="cd pa fo fp" id="a6"><Ca/></span>
                 </span>
             </h5>
             <h5 className="ab gh fd pp ma bb ca da ck cc" onClick={active} data-gc={'a7'} data-gd={'b7'}>
                 <span className="ab gh wb abc" >
-                    <span className="de">a</span>
+                    <span className="de fop"><Help/></span>
                 </span>
                 <span className="ab gh wa bc bcd caa ffo" id='b7'>
                     <span className="de">HELP</span>
-                    <span className="cd pa fo" id="a7">c</span>
+                    <span className="cd pa fo fp" id="a7"><Ca/></span>
                 </span>
             </h5>
             <div className="mta others">
                 <h5 className="ab gh fd pp ma caa bc v wd fe fw fss">
                     <span >Categories</span>
-                    <span>c</span>
+                    <span className="fp gh jf ab mv bda ppd"><Ca/></span>
                 </h5>
                 <div className="ppb  fb caa">
                     <label className='dp poa hcc onike och mb'>
@@ -158,7 +157,7 @@ const Sidebar=(props)=>{
             <div className="mta others">
                 <h5 className="ab gh fd pp ma caa bc v wd fe fw fss">
                     <span>Recent activity</span>
-                    <span>c</span>
+                    <span className="fp gh jf ab mv bda ppd"><Ca/></span>
                 </h5>
                 {(props.requests.MARKET_NEWS.fulfilled)?
                     <div className="ppb">

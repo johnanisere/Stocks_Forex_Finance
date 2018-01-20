@@ -40,10 +40,10 @@ a{
 
 /*Containers Statisticals*/
 .pot{
-  top:-10px;
+  top:-2px;
 }
 .pol{
-  left:10px;
+  left:20px;
 }
 .mb{
   margin: 5px 0;
@@ -65,6 +65,9 @@ a{
 }
 .ppa{
   padding: 20px 0;
+}
+.ppd{
+  padding:2px;
 }
 .ppb{
   padding:0 25px;
@@ -134,12 +137,21 @@ a{
 .onike{
   border-radius: 5px;
 }
+.mv{
+  border-radius: 50%;
+}
 /*fonts */
 .fw{
   font-size: 16px;
 }
+.fp{
+  font-size:10px;
+}
 .fx{
   font-size: 20px;
+}
+.fop{
+  font-size: 30px;
 }
 .fb{
   font-family: 'Julius Sans One', sans-serif;
@@ -175,6 +187,9 @@ a{
 }
 .bhd{
   border:2px solid rgb(233,30,99);
+}
+.bda{
+  border:2px solid rgba(255,255,255,0.3);
 }
 .bg{
   background-color: rgba(0,0,0,0.7)
